@@ -1,0 +1,6 @@
+Array
+(
+    [socialn] => facebook
+    [email] => Holamundo@gmsil.com
+    [userpassword] => karlakamino
+)

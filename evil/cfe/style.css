@@ -1,0 +1,214 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Evitar scroll horizontal */
+}
+
+.contenedor-imagen {
+    position: relative; /* Establecer como contenedor relativo */
+    width: 100%; /* Ancho completo del viewport */
+    min-height: 100vh; /* Altura mínima del viewport */
+    overflow-y: auto; /* Habilitar scroll vertical si es necesario */
+}
+
+.contenedor-imagen img {
+    width: 100%; /* Hace la imagen de fondo responsive en ancho */
+    height: auto; /* Mantener la proporción de la imagen de fondo */
+}
+
+
+
+.imagen-fija img {
+    width: 100%; /* Hace la imagen fija responsive en ancho */
+    height: auto; /* Mantener la proporción de la imagen fija */
+}
+button {
+    padding: 10px 28px; /* Aumentar el padding para hacer el botón más grande */
+    font-size: 18px; /* Aumentar el tamaño de la fuente */
+    font-weight: 800;
+    background-color: #ffffff; /* Color de fondo del botón */
+    color: #a41e37; /* Color del texto */
+    border: none; /* Eliminar borde */
+    cursor: pointer; /* Cambiar el cursor a pointer */
+    border-radius: 8px; /* Bordes redondeados */
+    position: absolute; /* Posicionar absolutamente dentro de su contenedor */
+    bottom: 20%; /* Posicionar más abajo dentro del contenedor */
+    right: 10%; /* Posicionar más a la derecha dentro del contenedor */
+    left: 10%;
+    letter-spacing: -1px;
+}
+
+
+
+.inner-container {
+    width: 400px;
+    height: 490px;
+    position: absolute;
+    top: calc(30vh - 100px); /* Ajusta la posición más abajo */
+    left: calc(50vw - 200px);
+    overflow: hidden;
+    
+}
+
+
+
+
+.box h1 {
+    text-align: center;
+    margin: 50px 0;
+    font-size: 30px;
+}
+
+.icon {
+    padding: 10px 1px;
+    margin: 0px 5px;
+}
+
+.box {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-family: Helvetica;
+    color: #b63535;
+    padding: 5px 0px;
+}
+
+.lock {
+    vertical-align: middle; 
+    margin: 0px 10px;
+}
+
+.box input {
+    display: block;
+    width: 300px;
+    margin: 15px auto;
+    padding: 10px;
+    background: rgba(7, 7, 7, 0.4);
+    color: #ffffff;
+    border: 0;
+}
+
+.box input:focus, .box input:active, .box .button:focus, .box .button:active {
+    outline: none;
+}
+
+.box .button {
+    background: #9e0b0b;
+    border: 0;
+    color: #fff;
+    padding: 8px;
+    font-size: 20px;
+    width: 320px;
+    margin: 20px auto;
+    display: block;
+    cursor: pointer;
+    
+}
+
+.box .button:active {
+    background: #f8c6c6;
+}
+
+.box p {
+    font-size: 14px;
+    text-align: center;
+    padding: 4px;
+}
+
+.list {
+    display: block;
+    width: 320px;
+    margin: 20px auto;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border: 0;
+}
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+    background: #ffffff;
+}
+
+.tooltip {
+    display: inline;
+    position: relative;
+}
+
+.tooltip:hover:after {
+    background: #333;
+    background: rgba(0, 0, 0, .8);
+    border-radius: 5px;
+    bottom: 50px;
+    color: #fff;
+    content: attr(title);
+    left: 5%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: 80px;
+}
+
+.tooltip:hover:before {
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 44px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+}
+
